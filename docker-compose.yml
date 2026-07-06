@@ -1,0 +1,12 @@
+services:
+  sunday:
+    build:
+      context: .
+      args:
+        OPENCLAW_VERSION: ${OPENCLAW_VERSION:-2026.6.11}
+    container_name: sunday-openclaw
+    ports:
+      - "${OPENCLAW_PORT:-18789}:18789"
+    volumes:
+      - "${OPENCLAW_STATE_DIR:-./state/openclaw}:/home/sunday/.openclaw"
+    restart: unless-stopped
