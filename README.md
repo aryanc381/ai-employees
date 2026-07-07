@@ -115,3 +115,11 @@ The VPS runs:
 ```bash
 bash scripts/deploy-vps.sh
 ```
+
+## Model Auth
+
+Set this in `.env` on the VPS:
+
+```env
+OPENAI_API_KEY=your-openai-api-key
+```
